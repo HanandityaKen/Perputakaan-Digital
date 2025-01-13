@@ -40,9 +40,9 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'admin' => [
+        'staff' => [
             'driver' => 'session',
-            'provider' => 'admins'
+            'provider' => 'staff'
         ],
         'super_admin' => [
             'driver' => 'session',
@@ -73,9 +73,9 @@ return [
             'driver' => 'eloquent',
             'model' => env('USER_MODEL', App\Models\User::class),
         ],
-        'admins' => [
+        'staff' => [
             'driver' => 'eloquent',
-            'model' => env('ADMIN_MODEL', App\Models\Admin::class),
+            'model' => env('STAFF_MODEL', App\Models\Staff::class),
         ],
         'super_admins' => [
             'driver' => 'eloquent',
