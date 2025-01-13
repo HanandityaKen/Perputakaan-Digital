@@ -9,10 +9,24 @@ use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
+    
+    public function showUserRegisterForm()
+    {
+        return view('auth.user.register');
+    }
+    
+    // public function userRegistrationProses(Request $request)
+    // {
+    //     $request->validate([
+    //         'email'     => 'required|email|string',
+    //         'password'  => 'required|string',
+    //     ]);
+    // }
+    
     public function showUserLoginForm()
     {
         return view('auth.user.login');
-    } 
+    }
 
     public function userLoginProses(Request $requst)
     {
